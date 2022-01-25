@@ -63,3 +63,11 @@ test('Withdraws Should only accept numbers', () => {
   // Act/Assert
   expect(() => { account.withdraw("toto") }).toThrow(TypeError)
 });
+
+test('Withdraws Should only accept positive numbers', () => {
+  // Arrange
+  const account = new Account()
+
+  // Act/Assert
+  expect(() => { account.withdraw(-10) }).toThrow(TypeError)
+});
