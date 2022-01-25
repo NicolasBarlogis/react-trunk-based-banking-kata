@@ -15,4 +15,8 @@ export default class Account {
     }
     this.#balance += Math.abs(amount)
   }
+
+  withdraw(amount) {
+    return -50
+  }
 }

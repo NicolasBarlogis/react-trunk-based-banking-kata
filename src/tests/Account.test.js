@@ -31,3 +31,14 @@ test('Deposits Should only accept numbers', () => {
   // Act/Assert
   expect(() => { account.deposit("toto") }).toThrow(TypeError)
 });
+
+test('Account with one withdrawal Should have correct balance', () => {
+  // Arrange
+  const account = new Account()
+  
+  // Act
+  account.withdraw(50)
+
+  // Assert
+  expect(account.getBalance()).toBe(-50)
+});
