@@ -10,3 +10,16 @@ test('Account with one deposit Should have correct balance', () => {
   // Assert
   expect(account.getBalance()).toBe(50)
 });
+
+test('Account with multiple deposits Should have correct balance', () => {
+  // Arrange
+  const account = new Account()
+  
+  // Act
+  account.deposit(50)
+  account.deposit(150)
+  account.deposit(30)
+
+  // Assert
+  expect(account.getBalance()).toBe(230)
+});
