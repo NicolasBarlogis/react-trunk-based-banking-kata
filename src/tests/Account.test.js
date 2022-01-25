@@ -55,3 +55,11 @@ test('Account with multiple withdrawal Should have correct balance', () => {
   // Assert
   expect(account.getBalance()).toBe(-230)
 });
+
+test('Withdraws Should only accept numbers', () => {
+  // Arrange
+  const account = new Account()
+
+  // Act/Assert
+  expect(() => { account.withdraw("toto") }).toThrow(TypeError)
+});
