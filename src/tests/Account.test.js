@@ -31,3 +31,51 @@ test('Deposits Should only accept numbers', () => {
   // Act/Assert
   expect(() => { account.deposit("toto") }).toThrow(TypeError)
 });
+
+test('Deposits Should only accept positive numbers', () => {
+  // Arrange
+  const account = new Account()
+
+  // Act/Assert
+  expect(() => { account.deposit(-10) }).toThrow(TypeError)
+});
+
+test('Account with one withdrawal Should have correct balance', () => {
+  // Arrange
+  const account = new Account()
+  
+  // Act
+  account.withdraw(50)
+
+  // Assert
+  expect(account.getBalance()).toBe(-50)
+});
+
+test('Account with multiple withdrawal Should have correct balance', () => {
+  // Arrange
+  const account = new Account()
+  
+  // Act
+  account.withdraw(50)
+  account.withdraw(150)
+  account.withdraw(30)
+
+  // Assert
+  expect(account.getBalance()).toBe(-230)
+});
+
+test('Withdraws Should only accept numbers', () => {
+  // Arrange
+  const account = new Account()
+
+  // Act/Assert
+  expect(() => { account.withdraw("toto") }).toThrow(TypeError)
+});
+
+test('Withdraws Should only accept positive numbers', () => {
+  // Arrange
+  const account = new Account()
+
+  // Act/Assert
+  expect(() => { account.withdraw(-10) }).toThrow(TypeError)
+});
