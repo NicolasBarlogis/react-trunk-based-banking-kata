@@ -17,6 +17,6 @@ export default class Account {
   }
 
   withdraw(amount) {
-    return -50
+    this.#balance -= Math.round(amount)
   }
 }
