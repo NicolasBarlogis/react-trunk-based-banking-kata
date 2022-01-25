@@ -10,6 +10,9 @@ export default class Account {
   }
 
   deposit(amount) {
-    this.#balance += amount
+    if(isNaN(amount)) {
+      throw new TypeError("Must be a number")
+    }
+    this.#balance += Math.abs(amount)
   }
 }

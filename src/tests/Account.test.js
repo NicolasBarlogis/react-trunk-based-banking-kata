@@ -23,3 +23,11 @@ test('Account with multiple deposits Should have correct balance', () => {
   // Assert
   expect(account.getBalance()).toBe(230)
 });
+
+test('Deposits Should only accept numbers', () => {
+  // Arrange
+  const account = new Account()
+
+  // Act/Assert
+  expect(() => { account.deposit("toto") }).toThrow(TypeError)
+});
