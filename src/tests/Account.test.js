@@ -37,7 +37,7 @@ test('Deposits Should only accept positive numbers', () => {
   const account = new Account()
 
   // Act/Assert
-  expect(() => { account.deposit(-10) }).toThrow(TypeError)
+  expect(() => { account.deposit(-10) }).toThrow(RangeError)
 });
 
 test('Account with one withdrawal Should have correct balance', () => {
@@ -77,7 +77,7 @@ test('Withdraws Should only accept positive numbers', () => {
   const account = new Account()
 
   // Act/Assert
-  expect(() => { account.withdraw(-10) }).toThrow(TypeError)
+  expect(() => { account.withdraw(-10) }).toThrow(RangeError)
 });
 
 test('Account with multiple withdrawal/deposits Should have correct balance', () => {

@@ -16,15 +16,21 @@ export default class Account {
   }
 
   deposit(amount) {
-    if(isNaN(amount) || amount < 0) {
+    if(isNaN(amount)) {
       throw new TypeError("Must be a number")
+    }
+    if(amount < 0) {
+      throw new RangeError("Must be positive")
     }
     this.#statements.push(this.#buildStandardDeposit(amount))
   }
 
   withdraw(amount) {
-    if(isNaN(amount) || amount < 0) {
+    if(isNaN(amount)) {
       throw new TypeError("Must be a number")
+    }
+    if(amount < 0) {
+      throw new RangeError("Must be positive")
     }
     this.#statements.push(this.#buildStandardDeposit(-amount))
   }
