@@ -7,11 +7,12 @@ export default class Account {
     this.#statements = []
   }
 
+  // 2 digits precision
   getBalance() {
     if(this.#statements.length == 0) {
       return 0
     }
-    return this.#statements.at(-1).getBalance()
+    return parseFloat(this.#statements.at(-1).getBalance().toFixed(2))
   }
 
   deposit(amount) {
