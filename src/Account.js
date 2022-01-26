@@ -1,25 +1,30 @@
+import Statement from './Statement'
+
 export default class Account {
-  #balance
+  #statements
 
   constructor() {
-    this.#balance = 0
+    this.#statements = []
   }
 
   getBalance() {
-    return this.#balance
+    if(this.#statements.length == 0) {
+      return 0
+    }
+    return this.#statements.at(-1).getBalance()
   }
 
   deposit(amount) {
     if(isNaN(amount) || amount < 0) {
       throw new TypeError("Must be a number")
     }
-    this.#balance += Math.round(amount)
+    this.#statements.push(new Statement(new Date(Date.now()), Math.floor(amount), this.getBalance() + Math.floor(amount)))
   }
 
   withdraw(amount) {
     if(isNaN(amount) || amount < 0) {
       throw new TypeError("Must be a number")
     }
-    this.#balance -= Math.round(amount)
+        this.#statements.push(new Statement(new Date(Date.now()), Math.floor(amount), this.getBalance() - Math.floor(amount)))
   }
 }
