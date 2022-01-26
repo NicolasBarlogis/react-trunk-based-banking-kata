@@ -7,24 +7,25 @@ export default class Account {
     this.#statements = []
   }
 
+  // 2 digits precision
   getBalance() {
     if(this.#statements.length == 0) {
       return 0
     }
-    return this.#statements.at(-1).getBalance()
+    return parseFloat(this.#statements.at(-1).getBalance().toFixed(2))
   }
 
   deposit(amount) {
     if(isNaN(amount) || amount < 0) {
       throw new TypeError("Must be a number")
     }
-    this.#statements.push(new Statement(new Date(Date.now()), Math.floor(amount), this.getBalance() + Math.floor(amount)))
+    this.#statements.push(new Statement(new Date(Date.now()), amount, this.getBalance() + amount))
   }
 
   withdraw(amount) {
     if(isNaN(amount) || amount < 0) {
       throw new TypeError("Must be a number")
     }
-        this.#statements.push(new Statement(new Date(Date.now()), Math.floor(amount), this.getBalance() - Math.floor(amount)))
+    this.#statements.push(new Statement(new Date(Date.now()), amount, this.getBalance() - amount))
   }
 }
