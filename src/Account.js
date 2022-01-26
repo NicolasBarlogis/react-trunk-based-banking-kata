@@ -19,13 +19,17 @@ export default class Account {
     if(isNaN(amount) || amount < 0) {
       throw new TypeError("Must be a number")
     }
-    this.#statements.push(new Statement(new Date(Date.now()), amount, this.getBalance() + amount))
+    this.#statements.push(this.#buildStandardDeposit(amount))
   }
 
   withdraw(amount) {
     if(isNaN(amount) || amount < 0) {
       throw new TypeError("Must be a number")
     }
-    this.#statements.push(new Statement(new Date(Date.now()), amount, this.getBalance() - amount))
+    this.#statements.push(this.#buildStandardDeposit(-amount))
+  }
+
+  #buildStandardDeposit(amount) {
+    return new Statement(new Date(Date.now()), amount, this.getBalance() + amount)
   }
 }
