@@ -68,6 +68,8 @@ git rebase main
 gti rebase --continue
 ```
 
+The team use tags. Tags mark a version in stone and can be picked by CI/CD pipelines from deployement.
+
 Note that team merged branch with and without squashing. In your team, you may choose how to do, based on rule or case by case. A good practice would be that every commit in master is a working version of the software. But to much squash and you will loose details. Rebase may help to group big a branch with a lot of commits in a few meaningful commits. 
 
 
