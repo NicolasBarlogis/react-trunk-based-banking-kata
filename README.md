@@ -16,7 +16,7 @@ In this case, the features branches will be created afterward, but in reality th
  * Tag it as v2.0.0
  * Apply the patch [bf52755](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/bf527551fae1996c3372375533e1e50137271ba5) (via cherry-pic) to branch v2
  * Tag it as v2.0.1
- * Apply the same patch [bf52755](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/bf527551fae1996c3372375533e1e50137271ba5) to branch v1. This one will require more work
+ * Apply the same patch [bf52755](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/bf527551fae1996c3372375533e1e50137271ba5) to branch v1. This one will require more work. Do not forget to test !
  * Tag it as v1.0.1
 
  A solution is available [here](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/blob/main/SOLUTION.md), but you may do this exercice without it.
@@ -69,6 +69,8 @@ git rebase main
 # if needed, resolve conflit, then continue
 gti rebase --continue
 ```
+
+The team use tags. Tags mark a version in stone and can be picked by CI/CD pipelines from deployement.
 
 Note that team merged branch with and without squashing. In your team, you may choose how to do, based on rule or case by case. A good practice would be that every commit in master is a working version of the software. But to much squash and you will loose details. Rebase may help to group big a branch with a lot of commits in a few meaningful commits. 
 
