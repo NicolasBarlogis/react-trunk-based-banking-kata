@@ -13,9 +13,9 @@
  ```
  tag name dev/1.0.0 is prefixed here so that everyone working on this repo can create a tag, but in reality it would just be 1.0.0 .
  
- ###  Create a branch v2 from commit [cdc4dc3](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/cdc4dc3f9f32df11775f55c3dcc51ac110c02ddf)
+ ###  Create a branch v2 from commit [b0a0d5f](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/b0a0d5f9f61125203734218692ab8a2ee683edbf)
  ```git
-  git checkout -b dev/RELEASE-2 cdc4dc3f9f32df11775f55c3dcc51ac110c02ddf
+  git checkout -b dev/RELEASE-2 b0a0d5f9f61125203734218692ab8a2ee683edbf
   git push origin dev/RELEASE-2
  ```
  

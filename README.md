@@ -4,13 +4,15 @@ The purpose of this Kata is to see the [Trunk Base Development](https://trunkbas
 This is done via the implementation of a basic Banking Kata.
 
 For this kata, you have a dummy repository with features already developed and pushed to main (the trunk).
-You goal is to create two releases branches, with corrections. 
+Your goal is to create two releases branches, an apply some corrections.
+Try to understand the meaning of the branches / fixs to understands why we do the differents versions.
+
 In this case, the features branches will be created afterward, but in reality this would have been done incrementally.
 
 ## Objectives
  * Create a release branch v1 from commit [71ebe48](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/71ebe4862f0368bf75ef0b22d1a13c1569fae8d3)
  * Tag it as v1.0.0
- * Create a branch v2 from commit [cdc4dc3](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/cdc4dc3f9f32df11775f55c3dcc51ac110c02ddf)
+ * Create a branch v2 from commit [b0a0d5f](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/b0a0d5f9f61125203734218692ab8a2ee683edbf)
  * Tag it as v2.0.0
  * Apply the patch [bf52755](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/bf527551fae1996c3372375533e1e50137271ba5) (via cherry-pic) to branch v2
  * Tag it as v2.0.1
