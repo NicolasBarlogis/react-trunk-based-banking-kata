@@ -18,6 +18,8 @@ In this case, the features branches will be created afterward, but in reality th
  * Tag it as v2.0.1
  * Apply the same patch [bf52755](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/commit/bf527551fae1996c3372375533e1e50137271ba5) to branch v1. This one will require more work. Do not forget to test !
  * Tag it as v1.0.1
+ 
+![Target image](trunk_based_schema.png)
 
  A solution is available [here](https://github.com/NicolasBarlogis/react-trunk-based-banking-kata/blob/main/SOLUTION.md), but you may do this exercice without it.
 
